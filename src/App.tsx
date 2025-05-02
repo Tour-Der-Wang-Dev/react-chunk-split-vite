@@ -16,6 +16,7 @@ const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Features = lazy(() => import('./pages/Features'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Settings = lazy(() => import('./pages/Settings'));
+const Automation = lazy(() => import('./pages/Automation'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Create a new QueryClient instance
@@ -46,6 +47,7 @@ const App: React.FC = () => {
                   <Route path="/features" element={<Features />} />
                   <Route path="/pricing" element={<Pricing />} />
                   <Route path="/settings" element={<Settings />} />
+                  <Route path="/automation" element={<Automation />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
