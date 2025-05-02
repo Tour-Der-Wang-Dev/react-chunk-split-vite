@@ -36,8 +36,17 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           // Split React into its own chunk
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          // UI components in another chunk
-          'vendor-ui': ['@radix-ui'],
+          // UI components in another chunk - specify individual radix packages instead of @radix-ui
+          'vendor-ui': [
+            '@radix-ui/react-slider',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-navigation-menu',
+            '@radix-ui/react-menubar',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-label',
+            '@radix-ui/react-toggle',
+          ],
           // Query library in its own chunk
           'vendor-query': ['@tanstack/react-query'],
         },
