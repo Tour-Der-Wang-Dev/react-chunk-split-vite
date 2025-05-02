@@ -4,9 +4,19 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// Using StrictMode for enhanced development checks
-// This helps catch potential problems early
-createRoot(document.getElementById('root')!).render(
+// Get the root element
+const rootElement = document.getElementById('root');
+
+// Ensure the root element exists
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
+
+// Create root with explicit typing
+const root = createRoot(rootElement);
+
+// Render the app
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
