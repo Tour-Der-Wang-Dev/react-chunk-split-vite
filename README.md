@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
 
-## Project info
+# Optimized React Project
 
-**URL**: https://lovable.dev/projects/64b20b89-1174-4de8-872e-962a0e0d3c8f
+A high-performance React application with TypeScript and Vite, featuring:
 
-## How can I edit this code?
+- Code splitting with React.lazy and Suspense
+- Manual chunk optimization for vendor libraries
+- Performance-focused CSS with system fonts
+- Strict Mode for improved development
 
-There are several ways of editing your application.
+## Performance Optimizations
 
-**Use Lovable**
+- **React.lazy and Suspense**: Components are loaded only when needed
+- **Manual Chunk Splitting**: Separates vendor code (React, UI components) for better caching
+- **System Font Stack**: Uses fast-loading system fonts for better performance
+- **Optimized CSS**: Minimal styling with performance in mind
+- **Strict Mode**: Helps catch potential issues during development
+- **Terser Minification**: Removes comments and console logs in production
+- **Optimized Development Builds**: Faster HMR with pre-bundling
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/64b20b89-1174-4de8-872e-962a0e0d3c8f) and start prompting.
+## Commands
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Install dependencies
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## Folder Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `/src` - Application source code
+  - `/components` - Reusable React components
+  - `/pages` - Page components lazy loaded by React Router
+- `/public` - Static assets
 
-**Use GitHub Codespaces**
+## Browser Support
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/64b20b89-1174-4de8-872e-962a0e0d3c8f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project targets modern browsers with good ES6+ support.
