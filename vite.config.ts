@@ -18,6 +18,8 @@ export default defineConfig(({ mode }) => ({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+    // Add mainFields to improve module resolution
+    mainFields: ['module', 'jsnext:main', 'jsnext', 'main'],
   },
   build: {
     // Enable minification for production builds
@@ -34,8 +36,23 @@ export default defineConfig(({ mode }) => ({
         manualChunks: {
           // Split React into its own chunk
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          // UI components in another chunk
-          'vendor-ui': ['@/components/ui'],
+          // UI components in another chunk - reference specific packages
+          'vendor-ui': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-label',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toggle',
+          ],
           // Query library in its own chunk
           'vendor-query': ['@tanstack/react-query'],
         },
